@@ -5,8 +5,182 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+        /* Modal Content */
+        .add-basket-modal-content {
+          position: fixed;
+          bottom: 0;
+          background-color: #fefefe;
+          width: 100%;
+          -webkit-animation-name: slideIn;
+          -webkit-animation-duration: 0.4s;
+          animation-name: slideIn;
+          animation-duration: 0.4s
+        }
+        
+        /* The Close Button */
+        .add-basket-close {
+          color: white;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .add-basket-close:hover,
+        .add-basket-close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        .add-basket-modal-header {
+          padding: 2px 16px;
+          background-color: #5cb85c;
+          color: white;
+        }
+        
+        .add-basket-modal-body {padding: 2px 16px;}
+        
+        .add-basket-modal-footer {
+          padding: 2px 16px;
+          background-color: #5cb85c;
+          color: white;
+        }
+        
+        /* Add Animation */
+        @-webkit-keyframes slideIn {
+          from {bottom: -300px; opacity: 0} 
+          to {bottom: 0; opacity: 1}
+        }
+        
+        @keyframes slideIn {
+          from {bottom: -300px; opacity: 0}
+          to {bottom: 0; opacity: 1}
+        }
+        
+        @-webkit-keyframes fadeIn {
+          from {opacity: 0} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fadeIn {
+          from {opacity: 0} 
+          to {opacity: 1}
+        }
+        </style>
+
 </head>
 <body>
+    <div class="con-price-div">
+        <p>Your Configuration</p>
+        <span class="con-price"></span>
+        <span class="you-save"></span>
+    </div>
     
+    <div class="ab-add-to-cart ">
+        <button type="button">Click Me!</button>
+    </div>
+    <div>
+        <div class="free-man">
+        ${truckSvg}
+            <p><span>Free</span> 2-Man Delivery Within 5-10 Working Days</p>
+        </div>
+        <div class="ab-clearpay">
+        ${clearpaySvg}
+            <p>Make 4 interest-free payments of £79.99 GBP fortnightly with Clearpay. More info </p>
+        </div>
+        <div class="ab-klarna">
+        ${klarnaSvg}
+            <p>Spread your payments into 3 with Klarna</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="free-man">
+            <p><span>Free</span> 2-Man Delivery Within 5-10 Working Days</p>
+        </div>
+        <div class="ab-clearpay">
+            <p>Make 4 interest-free payments of £79.99 GBP fortnightly with Clearpay. More info </p>
+        </div>
+        <div class="ab-klarna">
+            <p>Make 4 interest-free payments of £79.99 GBP fortnightly with Clearpay. More info </p>
+        </div>
+    </div>
+    <div class="re-pd-price">
+        <p>From</p>
+        <div class="rg-co-price">
+            <span class="re-rg-price"></span> <s class="re-main-price"></s>
+        </div>
+        <p class="save-price">Savings from £119.55</p>
+    </div>
+
+    <a class="modal-button2" href="/checkout?discount= ">Check Out</a>
+    <button id="abCheckoutBtn" type="button"><a class="modal-button2" href="/checkout?discount= ">Check Out</a> <span>&#10095;</span></button>
+
+    <button id="addBasketModalBtn">Open Modal</button>
+    <div id="addBasketModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="add-basket-modal-content">
+          <div class="add-basket-modal-header">
+            <span class="add-basket-close">&times;</span>
+            <h2>Modal Header</h2>
+          </div>
+          <div class="add-basket-modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+          </div>
+          <div class="add-basket-modal-footer">
+            <h3>Modal Footer</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+      <script>
+        // Get the modal
+        var modal = document.getElementById("addBasketModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("addBasketModalBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("add-basket-close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
 </body>
 </html>
