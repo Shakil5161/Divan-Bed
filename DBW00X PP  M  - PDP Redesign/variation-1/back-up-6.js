@@ -1,5 +1,4 @@
-import './styles/index.scss';
-/* DO NOT IMPORT ANYTHING */
+
 var pdpRedesign = {
     init: function() {
         this.mainCss();
@@ -19,7 +18,7 @@ var pdpRedesign = {
         var guaranteeTag = `<span class="guarantee"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.9042 14.3013C15.2053 12.8721 14.5159 11.4428 13.8073 10.0136C13.7307 9.86267 13.7307 9.74727 13.836 9.63186C14.0563 9.37442 14.2573 9.11698 14.4967 8.8773C14.9467 8.43343 15.0808 7.90967 14.9084 7.34152C14.7265 6.7645 14.7265 6.21411 14.9084 5.62821C15.0999 5.01568 14.9467 4.44753 14.4297 4.01254C13.9413 3.60419 13.6637 3.11594 13.5296 2.52116C13.3956 1.92638 12.9838 1.55353 12.3519 1.38486C12.2657 1.36711 12.1891 1.34048 12.1029 1.32272C11.5859 1.23395 11.155 1.00314 10.8103 0.630295C10.7528 0.568154 10.6858 0.51489 10.6284 0.461627C10.1688 0.0532716 9.63255 -0.10652 9.01017 0.0799035C8.36864 0.275204 7.73668 0.310713 7.09515 0.097658C6.40574 -0.124274 5.81208 0.0532716 5.32375 0.541522C4.90245 0.967632 4.40454 1.25171 3.78216 1.36711C3.05445 1.50027 2.60442 1.92638 2.46079 2.60105C2.34589 3.16032 2.05864 3.61306 1.59903 3.98591C1.0341 4.44753 0.871324 5.01568 1.1107 5.68147C1.3022 6.20523 1.3022 6.71124 1.12985 7.24387C0.909625 7.89192 1.0724 8.46006 1.58946 8.94831C1.81926 9.17025 2.01076 9.42769 2.20226 9.67625C2.25014 9.73839 2.25014 9.87155 2.22141 9.95145C2.02034 10.3953 1.80011 10.8214 1.58946 11.2653C1.0724 12.2862 0.574496 13.2982 0.0861651 14.3102C-0.124487 14.7363 0.0670149 15.1447 0.50747 15.2601C0.603221 15.2867 0.708547 15.3045 0.813874 15.2956C1.61818 15.2689 2.42249 15.2334 3.21723 15.2157C3.32255 15.2157 3.4566 15.2512 3.52363 15.3133C4.06941 15.7838 4.60562 16.2721 5.1514 16.7426C5.65888 17.1776 6.29084 17.0444 6.56851 16.4674C6.72172 16.1478 6.87492 15.8371 7.02812 15.5175C7.33452 14.8695 7.6505 14.2303 7.98563 13.5379C8.04308 13.6533 8.08138 13.7154 8.11011 13.7776C8.54099 14.6653 8.99102 15.5441 9.3836 16.4407C9.67085 17.0888 10.4656 17.1065 10.8773 16.6982C11.3752 16.2188 11.9019 15.7661 12.4285 15.3222C12.5147 15.2512 12.6583 15.2068 12.7828 15.2068C13.5679 15.2246 14.3531 15.2601 15.1382 15.2867C15.2723 15.2867 15.4063 15.2689 15.5308 15.2246C15.9808 15.0914 16.1149 14.7274 15.9042 14.3013ZM5.4961 14.8517C5.16097 14.5588 4.82584 14.3102 4.54817 14.0084C4.20346 13.6266 3.81088 13.5467 3.31298 13.6089C2.98742 13.6533 2.65229 13.6178 2.27887 13.6178C2.63314 12.9076 2.98742 12.2063 3.33213 11.4961C3.68641 11.5849 4.04069 11.6381 4.35666 11.7713C4.63434 11.8867 4.8833 12.0642 5.1131 12.2595C5.50568 12.5969 5.94613 12.7833 6.53979 12.7212C6.18551 13.4313 5.85038 14.1326 5.4961 14.8517ZM7.21005 10.8037C6.95152 10.8658 6.70257 10.9812 6.45361 11.0611C6.38659 11.0789 6.27169 11.0789 6.23339 11.0434C5.73548 10.5462 5.10352 10.2888 4.40454 10.1467C4.19389 10.1024 4.08856 10.0047 4.04069 9.80941C3.88748 9.0726 3.50448 8.44231 2.8821 7.95406C2.75762 7.85641 2.71932 7.75876 2.7672 7.60784C2.85337 7.29714 2.90125 6.98643 2.96827 6.67573C3.05445 6.22299 2.90125 5.79688 2.77677 5.37077C2.73847 5.22873 2.74805 5.13108 2.86295 5.04231C3.50448 4.50967 3.90663 3.84387 4.08856 3.06267C4.11729 2.94727 4.17474 2.88513 4.30879 2.86737C5.14182 2.74309 5.79293 2.33473 6.36744 1.78434C6.53979 1.61567 6.69299 1.59792 6.93237 1.63343C7.40155 1.71332 7.88988 1.78434 8.36864 1.79322C8.66546 1.8021 8.95272 1.66894 9.24955 1.62455C9.33572 1.6068 9.4602 1.63343 9.50807 1.68669C10.0922 2.29923 10.8582 2.63656 11.6816 2.85849C11.8157 2.894 11.9019 2.94727 11.9306 3.0893C12.0934 3.87938 12.5051 4.5363 13.1562 5.06894C13.2136 5.11333 13.2424 5.18434 13.2615 5.21098C13.1849 5.57494 13.137 5.89453 13.0604 6.20523C12.9455 6.68461 13.0892 7.12847 13.2232 7.57233C13.2711 7.741 13.2519 7.86528 13.1083 7.98069C12.4668 8.47782 12.1317 9.15249 11.9402 9.88931C11.9114 10.0136 11.854 10.0935 11.7104 10.129C10.9731 10.2799 10.3124 10.5729 9.7666 11.07C9.71873 11.1144 9.5751 11.0877 9.4985 11.0611C8.75164 10.7326 7.99521 10.6172 7.21005 10.8037ZM12.304 13.5911C12.0551 13.5823 11.8731 13.6178 11.6912 13.7953C11.3178 14.1504 10.9156 14.4877 10.5039 14.8428C10.1592 14.1326 9.81448 13.4402 9.46977 12.73C10.1496 12.7833 10.6284 12.4992 11.0688 12.0998C11.2699 11.9133 11.5763 11.8157 11.854 11.7091C12.1029 11.6115 12.371 11.5671 12.6679 11.4961C13.0126 12.1974 13.3668 12.9076 13.7211 13.6C13.2328 13.6 12.7636 13.6089 12.304 13.5911Z" fill="#00B77E"/>
         <path d="M11.4231 6.36503C11.4231 4.59845 9.91022 3.18696 8.00478 3.18696C6.09933 3.17808 4.55774 4.60733 4.55774 6.3739C4.55774 8.14936 6.09933 9.56973 8.00478 9.55197C9.9198 9.54309 11.4327 8.14048 11.4231 6.36503ZM7.9952 7.97182C7.03769 7.97182 6.27168 7.25275 6.27168 6.36503C6.28126 5.48618 7.03769 4.77599 7.9952 4.77599C8.95271 4.77599 9.71872 5.4773 9.71872 6.3739C9.71872 7.26163 8.95271 7.97182 7.9952 7.97182Z" fill="#00B77E"/>
-        </svg> Quality Guarantee</span>
+        </svg> 5yrs Guarantee</span>
         `;
 
        var truckSvg =`<svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,28 +85,28 @@ var pdpRedesign = {
 
     
     var sizeInsert = `<div class='size-accordion common-accordian'>
-          <button class="accordion active enable"><span class='serial'></span> Select ${$(`.selector-wrapper [data-option="option1"]`).siblings( 'label' ).text()}: <span class='s-select'>Non Selected</span> <i class="fa fa-chevron-right ac-arrow"></i></button>
+          <button class="accordion active enable"><span class='serial'></span> Select ${$(`.selector-wrapper [data-option="option1"]`).siblings( 'label' ).text()}: <span class='s-select'>Non Selected</span> <p class='ac-arrow'>&#8249;</p></button>
           <div class="panel size-tab"> </div>
         </div>`;
 
    $(`.selector-wrapper [data-option="option1"]`).siblings( 'label' ).text() == 'Size' && $('.accordion-menu').prepend(sizeInsert);
 
    var otherInsert =` <div class='other-accordion common-accordian'>
-   <button class="accordion"><span class='serial'></span> ${$(`.selector-wrapper [data-option="option2"]`).siblings( 'label' ).text()}: <span class='o-select'>Non Selected</span> <i class="fa fa-chevron-right ac-arrow"></i></button>
+   <button class="accordion"><span class='serial'></span> ${$(`.selector-wrapper [data-option="option2"]`).siblings( 'label' ).text()}: <span class='o-select'>Non Selected</span> <p class='ac-arrow'>&#8249;</p></button>
    <div class="panel other-tab"> </div>
   </div>`;
 
   $(`.selector-wrapper [data-option="option2"]`).length > 0 && $('.accordion-menu').append(otherInsert);
 
   var other2Insert = `<div class='other2-accordion common-accordian'>
-  <button class="accordion"><span class='serial'></span>  ${$(`.selector-wrapper [data-option="option3"]`).siblings( 'label' ).text()}: <span class='o2-select'>Non Selected</span> <i class="fa fa-chevron-right ac-arrow"></i></button>
+  <button class="accordion"><span class='serial'></span>  ${$(`.selector-wrapper [data-option="option3"]`).siblings( 'label' ).text()}: <span class='o2-select'>Non Selected</span> <p class='ac-arrow'>&#8249;</p></button>
   <div class="panel other2-tab"> </div>
 </div>`;
 
   $(`.selector-wrapper [data-option="option3"]`).length > 0 && $('.accordion-menu').append(other2Insert);
 
  var addToCart = ` <div class="ab-add-to-cart common-accordian">
-      <button class='ab-cart-btn' type="button">Add to Basket <i class="fa fa-chevron-right"></i></button>
+      <button class='ab-cart-btn' type="button">Add to Basket</button>
       </div>
       `;
     $('.accordion-menu').append(addToCart);
@@ -172,7 +171,7 @@ var pdpRedesign = {
   $(".size-op").click(function(e){
     $('.size-op').removeClass("label-select");
     $( this ).addClass("label-select");
-    $('.s-select').html($( this ).text() +" " + `<i class="fa fa-check"></i>`).addClass('d-select');
+    $('.s-select').html($( this ).text() +" " + '&#10003;').addClass('d-select');
     // $(`.selector-wrapper [data-option="option1"]`).val($( this ).text()).change();
 
     // $(`.selector-wrapper [data-option="option1"]`).val($( this ).text());
@@ -185,10 +184,10 @@ var pdpRedesign = {
 
   ///////// click function on selected other option
   $(".other-op").click(function(e){
-    console.log("click other-op");
+    console.log(e.currentTarget.parentNode,"click");
     $('.other-op').removeClass("label-select");
     $( this ).addClass("label-select");
-    $('.o-select').html($( this ).text() +" " + '<i class="fa fa-check"></i>').addClass('d-select');
+    $('.o-select').html($( this ).text() +" " + '&#10003;').addClass('d-select');
     // $(`.selector-wrapper [data-option="option2"]`).val($( this ).text()).change();
     document.querySelector('.selector-wrapper [data-option="option2"]').value = $(this).text();
     document.querySelector('.selector-wrapper [data-option="option2"]').dispatchEvent(new Event('change', {bubbles: true}));
@@ -198,7 +197,7 @@ var pdpRedesign = {
     console.log(e.currentTarget.parentNode,"click");
     $('.other2-op').removeClass("label-select");
     $( this ).addClass("label-select");
-    $('.o2-select').html($( this ).text() +" " + '<i class="fa fa-check"></i>').addClass('d-select');
+    $('.o2-select').html($( this ).text() +" " + '&#10003;').addClass('d-select');
     // $(`.selector-wrapper [data-option="option3"]`).val($( this ).text()).change();
     document.querySelector('.selector-wrapper [data-option="option3"]').value = $(this).text();
     document.querySelector('.selector-wrapper [data-option="option3"]').dispatchEvent(new Event('change', {bubbles: true}));
@@ -210,7 +209,7 @@ var pdpRedesign = {
     if ($(`.mw-option-swatch.mw-validate-required-option.mw-option`).length) {
 
       var colorAccordion = `<div class='color-accordion common-accordian'>
-      <button id='color-acc' class="accordion"><span class='serial'></span>  Select Colour: <span class='c-select'>Non Selected</span> <i class="fa fa-chevron-right ac-arrow"></i></button>
+      <button id='color-acc' class="accordion"><span class='serial'></span>  Select Colour: <span class='c-select'>Non Selected</span> <p class='ac-arrow'>&#8249;</p></button>
       <div class="panel color-tab"> </div>
     </div>`;
 
@@ -219,7 +218,7 @@ var pdpRedesign = {
       $(`.mw-option-swatch.mw-validate-required-option.mw-option`).appendTo(".panel.color-tab");
       $(`.panel.color-tab .swatch-value-container`).click(function(){
         let colorName = $(`.mw-option-swatch.mw-validate-required-option.mw-option input[type="hidden"]`).val();
-        $(".c-select").html( colorName == "" ? 'Non Selected' : colorName +" " + '<i class="fa fa-check"></i>');
+        $(".c-select").html( colorName == "" ? 'Non Selected' : colorName +" " + '&#10003;');
         $(".c-select").addClass( colorName !== "" && 'd-select');
         $(".c-select").removeClass( colorName == "" && 'd-select');
       });
@@ -243,16 +242,16 @@ var pdpRedesign = {
         let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
         // let youSave = comPrice - curPrice;
 
-        $(".con-price-div .pay-price").text(`£${curPrice}`);
-        $(".con-price-div .com-price").text(`£${comPrice}`);
-        $(".con-price-div .you-save").text(`You save £${curPrice}`);
+        $(".con-price-div .pay-price").text(`£ ${curPrice}`);
+        $(".con-price-div .com-price").text(`£ ${comPrice}`);
+        $(".con-price-div .you-save").text(`You save £ ${curPrice}`);
           
       });
 
 
      if($(`.mw-option-select.mw-validate-required-option`).length > 0){
       var hbAccordion = `<div class='hb-btn-accordion common-accordian'>
-      <button id='hb_btn' class="accordion"><span class='serial'></span>  ${$(`.mw-option-select.mw-validate-required-option label`).text()}: <span class='hb-select'>Non Selected</span> <i class="fa fa-chevron-right ac-arrow"></i></button>
+      <button id='hb_btn' class="accordion"><span class='serial'></span>  ${$(`.mw-option-select.mw-validate-required-option label`).text()}: <span class='hb-select'>Non Selected</span> <p class='ac-arrow'>&#8249;</p></button>
       <div class="panel hb-tab"> </div>
     </div>`;
 
@@ -270,7 +269,7 @@ var pdpRedesign = {
         console.log(e.currentTarget.parentNode,"click");
         $('.hb-op').removeClass("label-select");
         $( this ).addClass("label-select");
-        $('.hb-select').html($( this ).text() +" " + '<i class="fa fa-check"></i>').addClass('d-select');
+        $('.hb-select').html($( this ).text() +" " + '&#10003;').addClass('d-select');
         // $(`.mw-option-select.mw-validate-required-option select`).val($( this ).text()).change();
         document.querySelector('.mw-option-select.mw-validate-required-option select').value = $(this).text();
         document.querySelector('.mw-option-select.mw-validate-required-option select').dispatchEvent(new Event('change', {bubbles: true}));
@@ -286,9 +285,9 @@ var pdpRedesign = {
         let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
         // let youSave = comPrice - curPrice;
 
-        $(".con-price-div .pay-price").text(`£${curPrice}`);
-        $(".con-price-div .com-price").text(`£${comPrice}`);
-        $(".con-price-div .you-save").text(`You save £${curPrice}`);
+        $(".con-price-div .pay-price").text(`£ ${curPrice}`);
+        $(".con-price-div .com-price").text(`£ ${comPrice}`);
+        $(".con-price-div .you-save").text(`You save £ ${curPrice}`);
       });
 
      }
@@ -308,8 +307,8 @@ var pdpRedesign = {
     let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
     // let youSave = comPrice - curPrice;
 
-    $(".con-price-div .pay-price").text(`£${curPrice}`);
-    $(".con-price-div .com-price").text(`£${comPrice}`);
+    $(".con-price-div .pay-price").text(`£ ${curPrice}`);
+    $(".con-price-div .com-price").text(`£ ${comPrice}`);
     $(".con-price-div .you-save").text(`You save £ ${curPrice}`);
 
 
@@ -341,75 +340,30 @@ var pdpRedesign = {
 			var observer = new MutationObserver(function() {
                 console.log("mutationnnnnnnnnnnnnnnnnnn");
                     ///////// loop on others option
+      $('.other-tab').empty();
 
-      if($(`.other-accordion .d-select`).text()){
-        var prevSelect = $(`.other-accordion .d-select`).text();
-        $('.other-tab').empty();
-        $(`.selector-wrapper [data-option="option2"] option`).each(function( index ) {
 
-          var otherOption = `<input type="radio" id="ab_other_${index}" name="ab-other" value="${$( this ).val()}"><label class="other-op set-op-value ${prevSelect.trim() == $( this ).text() ? 'label-select':''}" for="ab_other_${index}">${$( this ).text()}</label>`;
-          $('.other-tab').append(otherOption);
+      $(`.selector-wrapper [data-option="option2"] option`).each(function( index ) {
+        var otherOption = `<input type="radio" id="ab_other_${index}" name="ab-other" value="${$( this ).val()}"><label class="other-op set-op-value" for="ab_other_${index}">${$( this ).text()}</label>`;
 
-        });
-//// remove storage op select when option don't have
-        $('.other-tab .other-op').each(function (){
+        $('.other-tab').append(otherOption);
+      });
+    ///////// loop on others3 option
+    $('.other2-tab').empty();
+      $(`.selector-wrapper [data-option="option3"] option`).each(function( index ) {
+        var otherOption = `<input type="radio" id="ab_other2_${index}" name="ab-other2" value="${$( this ).val()}"><label class="other2-op set-op-value" for="ab_other2_${index}">${$( this ).text()}</label>`;
 
-          if(!$('.other-tab .other-op').hasClass('label-select')){
-            var defaultOP = $(`.other-tab [for="ab_other_0"]`);
-            $('.other-accordion .o-select').text(defaultOP.text());
-            defaultOP.addClass('label-select');
+        $('.other2-tab').append(otherOption);
+      });
 
-          }
-        })
-
-      }else{
-          $('.other-tab').empty();
-        $(`.selector-wrapper [data-option="option2"] option`).each(function( index ) {
-          var otherOption = `<input type="radio" id="ab_other_${index}" name="ab-other" value="${$( this ).val()}"><label class="other-op set-op-value" for="ab_other_${index}">${$( this ).text()}</label>`;
-
-          $('.other-tab').append(otherOption);
-        });
-      }
-
-      if($(`.other2-accordion  .d-select`).text()){
-        var prevSelectO2 = $(`.other2-accordion .d-select`).text();
-        $('.other2-tab').empty();
-        $(`.selector-wrapper [data-option="option3"] option`).each(function( index ) {
-
-          var otherOption = `<input type="radio" id="ab_other2_${index}" name="ab-other2" value="${$( this ).val()}"><label class="other2-op set-op-value ${prevSelectO2.trim() == $( this ).text() ? 'label-select':''}" for="ab_other2_${index}">${$( this ).text()}</label>`;
-
-          $('.other2-tab').append(otherOption);
-
-        });
-//// remove storage op select when option don't have
-        $('.other2-tab .other2-op').each(function (){
-
-          if(!$('.other2-tab .other2-op').hasClass('label-select')){
-            var defaultOP2 = $(`.other2-tab [for="ab_other2_0"]`);
-            $('.other2-accordion .o2-select').text(defaultOP2.text());
-            defaultOP2.addClass('label-select');
-
-          }
-        })
-
-      }else{
-          ///////// loop on others3 option
-          $('.other2-tab').empty();
-          $(`.selector-wrapper [data-option="option3"] option`).each(function( index ) {
-            var otherOption = `<input type="radio" id="ab_other2_${index}" name="ab-other2" value="${$( this ).val()}"><label class="other2-op set-op-value" for="ab_other2_${index}">${$( this ).text()}</label>`;
-
-            $('.other2-tab').append(otherOption);
-          });
-      }
 
 
       ///////// click function on selected other option
       $(".other-op").click(function(e){
-        
+        console.log(e.currentTarget.parentNode,"click");
         $('.other-op').removeClass("label-select");
         $( this ).addClass("label-select");
-        $('.o-select').html($( this ).text() +" " + '<i class="fa fa-check"></i>').addClass('d-select');
-        
+        $('.o-select').html($( this ).text() +" " + '&#10003;').addClass('d-select');
         // $(`.selector-wrapper [data-option="option2"]`).val($( this ).text()).change();
         document.querySelector('.selector-wrapper [data-option="option2"]').value = $(this).text();
         document.querySelector('.selector-wrapper [data-option="option2"]').dispatchEvent(new Event('change', {bubbles: true}));
@@ -418,16 +372,16 @@ var pdpRedesign = {
         let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
         // let youSave = comPrice - curPrice;
     // console.log(curPrice, comPrice, youSave)
-        $(".con-price-div .pay-price").text(`£${curPrice}`);
-        $(".con-price-div .com-price").text(`£${comPrice}`);
-        $(".con-price-div .you-save").text(`You save £${curPrice}`);
+        $(".con-price-div .pay-price").text(`£ ${curPrice}`);
+        $(".con-price-div .com-price").text(`£ ${comPrice}`);
+        $(".con-price-div .you-save").text(`You save £ ${curPrice}`);
       });
       ///////// click function on selected other2 option
       $(".other2-op").click(function(e){
 
         $('.other2-op').removeClass("label-select")
         $( this ).addClass("label-select");
-        $('.o2-select').html($( this ).text() +" " + '<i class="fa fa-check"></i>').addClass('d-select')
+        $('.o2-select').html($( this ).text() +" " + '&#10003;').addClass('d-select')
         // $(`.selector-wrapper [data-option="option3"]`).val($( this ).text()).change();
         document.querySelector('.selector-wrapper [data-option="option3"]').value = $(this).text();
         document.querySelector('.selector-wrapper [data-option="option3"]').dispatchEvent(new Event('change', {bubbles: true}));
@@ -435,9 +389,9 @@ var pdpRedesign = {
         let curPrice = $('.ab-price .price #productPrice').text().replace('£', '');
         let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
         // let youSave = comPrice - curPrice;
-        $(".con-price-div .pay-price").text(`£${curPrice}`);
-        $(".con-price-div .com-price").text(`£${comPrice}`);
-        $(".con-price-div .you-save").text(`You save £${curPrice}`);
+        $(".con-price-div .pay-price").text(`£ ${curPrice}`);
+        $(".con-price-div .com-price").text(`£ ${comPrice}`);
+        $(".con-price-div .you-save").text(`You save £ ${curPrice}`);
 
       });
 
@@ -468,9 +422,9 @@ var pdpRedesign = {
         let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
         // let youSave = comPrice - curPrice;
     // console.log(curPrice, comPrice, youSave)
-        $(".con-price-div .pay-price").text(`£${curPrice}`);
-        $(".con-price-div .com-price").text(`£${comPrice}`);
-        $(".con-price-div .you-save").text(`You save £${curPrice}`);
+        $(".con-price-div .pay-price").text(`£ ${curPrice}`);
+        $(".con-price-div .com-price").text(`£ ${comPrice}`);
+        $(".con-price-div .you-save").text(`You save £ ${curPrice}`);
 
       });
                 
@@ -493,7 +447,7 @@ var pdpRedesign = {
         let pdName = $(`.ab-title .title [itemprop="name"]`).text();
         $('.order-pd-name').text(pdName);
         $('#addBasketModalBtn').click();
-// console.log($(`#candyrack-frame .Upsell-List`).length, '#candyrack-frame .Upsell-List')
+
       });
   
       // let lastCommonAcc = $('.common-accordian')[$('.common-accordian').length - 2];
@@ -564,16 +518,14 @@ $('.accordion-menu').append(paymentHtml);
 let checkClearpay = setInterval(function() {
   if ($("p.clearpay-paragraph").length > 0) {
     $('p.clearpay-paragraph').appendTo(".ab-clearpay-contant");
-
-    $('.clearpay-link').before(`<span>Clearpay.</span>`);
-      var Make = $('.clearpay-text1').text().replace('or make', 'Make');
-      $('.clearpay-text1').text(Make);
     clearInterval(checkClearpay);
   }
 }, 100);
 
 
-
+$('.clearpay-link').before(`<span>Clearpay.</span>`);
+ var Make = $('.clearpay-text1').text().replace('or make', 'Make');
+ $('.clearpay-text1').text(Make);
 
 //////////price calculate for related product price
 let checkRePdPriceAndInsert = setInterval(function() {
@@ -591,7 +543,7 @@ let checkRePdPriceAndInsert = setInterval(function() {
           </div>
           <p class="save-price">Savings from £${save}</p>
           <div class='price-footer'>
-            <p><span><i class="fa fa-check"></i> </span> In Stock</p>
+            <p><span>&#10003; </span> In Stock</p>
           </div>
       </div>`;
       $(`.main_box .desc`).eq(index).append(priceHtml);
@@ -609,9 +561,9 @@ let checkRePdPriceAndInsert = setInterval(function() {
     // var reStar = $('.review_row .spr-badge').html();
     var decAcc = `<div class='dec-main-acc rte'>
 
-    <div id="abReview" class='review-acc'>
+    <div class='review-acc'>
 
-      <button class="dec-accordion">Reviews <span></span><i class="fa fa-chevron-right ac-arrow"></i></button>
+      <button class="dec-accordion">Reviews <span></span><p class='ac-arrow'>&#8249;</p></button>
       <div class="dec-panel ab-review-panal">
 
       </div>
@@ -648,7 +600,6 @@ let checkRePdPriceAndInsert = setInterval(function() {
     let checkReviewStar = setInterval(function() {
       if ($('.review_row .spr-badge').length > 0) {
         $('.review_row .spr-badge').appendTo('.review-acc .dec-accordion span');
-        $(`.ab-title .spr-badge-caption`).wrap( `<a href="#abReview"></a>` )
         clearInterval(checkReviewStar);
         
         $(".ab-review-panal .spr-reviews").html() == '' && $('.ab-review-panal').html(`<p> No Reviews</p>`);
@@ -678,7 +629,7 @@ let checkRePdPriceAndInsert = setInterval(function() {
 
         
         var decAcc = `<div>
-          <button class="dec-accordion">${title} <i class="fa fa-chevron-right ac-arrow"></i></button>
+          <button class="dec-accordion">${title} <p class='ac-arrow'>&#8249;</p></button>
           <div class="dec-panel">
             ${content}
           </div>
@@ -736,10 +687,10 @@ let checkRePdPriceAndInsert = setInterval(function() {
           </div>
           <div class="add-basket-modal-footer">
             <div class="ab-checkout">
-            <a id="abCheckoutBtn" class="modal-button2" href="/checkout?discount= "> Checkout Now<i class="fa fa-chevron-right"></i></a>
+            <a id="abCheckoutBtn" class="modal-button2" href="/checkout?discount= "> Checkout Now<span>&#10095;</span></a>
             </div>
             <div class="ab-view-basket">
-            <a id="abViewBasket" class="modal-button2" href="/cart">View Basket <i class="fa fa-chevron-right"></i></a>
+            <a id="abViewBasket" class="modal-button2" href="/cart">View Basket <span>&#10095;</span></a>
             </div>
           </div>
         </div>
@@ -789,3 +740,730 @@ let checkRePdPriceAndInsert = setInterval(function() {
 
 
 
+<style>
+ol.breadcrumb{
+    display: block;
+}
+ol.breadcrumb>li {
+    display: unset;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+ol.breadcrumb a, .s-select, .c-select, .o-select, .hb-select, .o2-select{
+    color: #777777;
+}
+body #content .pro_main_c .slider_1 {
+    padding: 20px 10px;
+}
+.row #image-block .flex-control-thumbs {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.row #image-block .flex-control-thumbs img {
+    min-width: 72px;
+    height: 72px;
+}
+.ab-title ,.ab-price{
+    padding: 0 10px;
+}
+#content .ab-title .title{
+    padding: 0;
+}
+#content .ab-title .title h2, .accordion{
+    text-align: start;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+}
+#content .ab-title .title .spr-badge{
+    text-align: start;
+}
+.ab-title .spr-badge {
+    display: flex;
+    align-items: center;
+}
+span.guarantee {
+    display: flex;
+    align-items: center;
+}
+span.guarantee, .ab-title .spr-badge-caption{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+.ab-title .spr-badge-caption{
+    border-bottom: 1px solid #333333;
+}
+.guarantee svg {
+    margin: 0 10px 0 20px;
+}
+.ab-price p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+.ab-price #productPrice{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 39px;
+    color: #000;
+}
+.ab-price #comparePrice{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: #777777;
+}
+
+
+.accordion-menu .accordion {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 15px 40px 15px 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+    pointer-events: none;
+    opacity: .5;
+    
+  }
+  .accordion .ac-arrow{
+    font-size: 50px!important;
+    transform: rotate(270deg);
+    transition: transform .5s;
+    position: absolute;
+    right: 25px;
+    top: -5px;
+    top: 20px;
+    font-weight: 300;
+}
+button.accordion.enable {
+    pointer-events: auto;
+    opacity: 1;
+}
+.accordion.active .ac-arrow{
+    transform: rotate(90deg);
+    transition: transform .5s;
+}
+.accordion.active + .panel{
+    padding-bottom: 20px!important;
+    max-height: 100%;
+}
+.accordion-menu{
+    position: relative;
+    padding: 15px 0px;
+}
+.accordion-menu .accordion:first-child{
+    border-top: 2px solid #EFEFEF !important;
+    border: none;
+    background: no-repeat;
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    box-shadow: none;
+
+}
+.panel.size-tab input , .panel.other-tab input, .panel.hb-tab input, .panel.other2-tab input, .owl-controls .owl-nav, .owl-item .on-sale{
+    display: none !important;
+}
+
+.panel.size-tab label, .panel.other-tab label, .panel.hb-tab label, .panel.other2-tab label{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+    padding: 10px;
+    border: 2px solid #5C5C5C;
+    border-radius: 6px;
+    margin: 5px;
+}
+.size-op.chacked + label{
+    background-color: red;
+}
+.d-select{
+    color: #00B77E;
+}
+.panel.size-tab .label-select, .panel.other-tab .label-select, .panel.hb-tab .label-select, .panel.other2-tab .label-select{
+    border: 2px solid #00B77E;
+}
+.qtip.qtip-default.qtip-swatch.qtip-bootstrap.qtip-pos-bc {
+    display: none !important;
+}
+.panel.color-tab .mw-option-swatch label{
+    display: none;
+}
+.common-accordian:last-child{
+    border-bottom: 2px solid #EFEFEF;;
+}
+
+
+.ab-add-to-cart {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+.ab-add-to-cart .ab-cart-btn {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    background: #CDCDCD;
+    border-radius: 101px;
+    border: none;
+    padding: 20px;
+    min-width: 345px;
+    pointer-events: none;
+}
+.ab-cart-btn-active{
+    background: #00B77E !important;
+    pointer-events: auto !important;
+}
+.con-price-div {
+    position: absolute;
+    bottom: 90px;
+    left: 15px;
+
+}
+.free-man{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.free-man {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000;
+    padding: 30px 0px;
+    margin: 0px 10px;
+    border-bottom: 2px solid #EFEFEF;
+}
+.free-man span {
+    color: #00B77E;
+    padding-left: 10px;
+}
+.ab-klarna{
+    font-size: 14px;
+    line-height: 26px;
+    color: #333333;
+}
+.ab-klarna p{
+    padding-left: 10px;
+    min-width: 300px;
+}
+
+.color-tab .swatch-option{
+    width: calc( 100% - 5px) !important;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.color-tab .swatch-value-container {
+    padding: 10px 0 0 0; 
+    background: #FFFFFF;
+    border: 2px solid #5C5C5C;
+    border-radius: 6px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.color-tab .swatch-value-container span{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5C5C5C;
+    text-align: center;
+    padding-top: 5px;
+}
+.color-tab .swatch-value-container .swatch-image{
+    height: 65px !important;
+    width: 65px !important;
+    line-height: 22px;
+    color: #5C5C5C;
+    text-align: center;
+}
+
+.dec-accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 15px 50px 15px 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    position: relative;
+    border-top: 2px solid #EFEFEF;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+}
+.dec-accordion span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+}
+
+
+.dec-panel {
+    padding: 0 18px 0px;
+    background-color: white;
+    max-height: auto;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.9);
+}
+.dec-accordion .ac-arrow{
+    font-size: 50px!important;
+    transform: rotate(90deg);
+    transition: transform .5s;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-weight: 300;
+}
+.dec-accordion.dec-active .ac-arrow {
+    transform: rotate(270deg);
+    transition: transform .5s;
+}
+
+  
+  .dec-accordion.dec-active + .dec-panel{
+    max-height: 0 !important;
+  }
+
+  body #content .owl-item .main_box{
+      border: none;
+      border-radius: 0;
+      border-bottom: 4px solid #2A364F;
+      height: auto !important;
+  }
+  #content .main_box .desc p {
+    font-weight: 400;
+    font-size: 12px !important;
+    line-height: 16px;
+    color: #828282;
+    order: 1;
+}
+#content .main_box .desc h5 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    order: 2;
+    padding: 10px 0px;
+}
+#content .main_box .desc h5 a{
+    color: #333333 !important;
+}
+#content span.spr-badge {
+    order: 3;
+    text-align: left;
+}
+.re-pd-price{
+    order: 5;
+}
+.main_box .desc .price{
+    order: 4;
+    color: #333333 !important;
+    display: none;
+}
+#content span.spr-badge[data-rating="0.0"]{
+    display: none;
+}
+.dec-panel p{
+    padding: 8px 0;
+}
+.dec-main-acc .dec-panel p span{
+    
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+.dec-main-acc  a, .dec-main-acc a:hover{
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+.dec-panel ul li {
+    list-style: disc;
+    margin-left: 18px;
+}
+.dec-panel img {
+    width: 100%;
+}
+.dec-main-acc{
+    padding: 0;
+}
+.dec-main-acc.rte ul, .dec-main-acc.rte ol {
+    margin: 0;
+}
+.review-acc .dec-accordion{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.ab-review-panal #shopify-product-reviews .spr-header-title, .ab-review-panal #shopify-product-reviews .spr-header{
+    display: none;
+}
+.ab-review-panal #shopify-product-reviews, .ab-review-panal #shopify-product-reviews .spr-container{
+    margin: 0;
+    padding: 0;
+}
+.ab-review-panal .spr-review {
+    border-top: 2px solid #EFEFEF;
+}
+.ab-review-panal .spr-review-footer, .ab-review-panal .spr-pagination {
+    display: none;
+}
+.ab-review-panal .spr-review-header h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+.ab-review-panal .spr-review-content, .ab-review-panal .spr-review{
+    margin: 0;
+    padding-bottom: 0;
+}
+#ab_read_more{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+}
+#shopify-product-reviews .spr-reviews{
+    display: block !important;
+    margin: 0;
+}
+.ab-review-panal .spr-reviews .spr-review:first-child {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.mfp-wrap{
+    display: none !important;
+}
+
+.mfp-bg.mfp-move-from-top.mfp-ready{
+    opacity: 0 !important;
+}
+#content .main_box .re-pd-price > p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+.re-pd-price{
+    padding-top: 10px;
+}
+#content .main_box .re-rg-price{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000;
+}
+#content .main_box .re-main-price{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
+    color: #828282;
+}
+body #content .main_box .save-price{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 13px;
+    color: red !important;
+}
+body #content .main_box .price-footer {
+    padding-top: 10px;
+    color: #333333;
+}
+body #content .main_box .price-footer span{
+    color: #00B77E;
+    font-weight: 700;
+}
+.dec-panel table {
+    width: 100%;
+}
+.con-price-div p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333333;
+    
+}
+.con-price-div .pay-price{
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 42px;
+    color: #000;
+}
+.con-price-div .com-price{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+}
+.con-price-div .you-save{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: red;
+}
+
+#addBasketModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+
+.add-basket-modal-content {
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  /* The Close Button */
+  .add-basket-close {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+  }
+  .add-basket-close span, #abCheckoutBtn span, #abViewBasket span{
+    padding-left: 5px;
+  }
+  
+  .add-basket-close:hover,
+  .add-basket-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .add-basket-modal-header {
+    text-align: end;
+  }
+  
+  .add-basket-modal-body {
+      padding: 10px 0px;
+    }
+  
+
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+.add-basket-modal-body .adtb-heading{
+    padding: 10px 0px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #00B77E;
+    text-align: center;
+}
+#abCheckoutBtn {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    background: #00B77E;
+    border-radius: 75px;
+    border: 0;
+    min-width: 345px;
+    height: 50px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+#abViewBasket{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #333333;
+    border-radius: 75px;
+    background: #FFFFFF;
+    border: 2px solid #C4C4C4;
+    min-width: 345px;
+    height: 50px;
+    padding: 10px 0px;
+    margin-bottom: 30px;
+    margin-right: 0;
+}
+p.order-pd-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+    padding: 20px 0px;
+}
+#addBasketModalBtn, .ab-clearpay-contant .clearpay-paragraph .clearpay-logo{
+    display: none;
+}
+.ab-clearpay-contant .clearpay-paragraph{
+    display: block !important;
+    margin: 0 !important;
+    min-width: 300px;
+    color: #333333;
+}
+
+.clearpay-link {
+    color: #333333;
+}
+.clearpay-link-inner {
+    padding-right: 0;
+    padding-left: 5px;
+}
+.ab-clearpay-contant {
+    padding-left: 10px;
+}
+.ab-clearpay,  .ab-klarna{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+}
+@media only screen and (max-width: 410px){
+    .free-man p {
+        font-size: 13px !important;
+    }
+}
+form .desc_blk{
+    display: none;
+}
+.add-basket-modal-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body #footer .trustpilot-widget{
+    padding: 10px !important;
+}
+#content .h_row_4{
+    background: #F3F3F3;
+    padding: 15px;
+}
+.last-acc .accordion{
+    border-bottom: 2px solid #EFEFEF !important;
+}
+.review-acc .spr-starrating{
+    font-size: 80%;
+}
+
+span.serial {
+    position: relative;
+    margin-left: 10px;
+    padding-right: 2px;
+}
+.common-accordian:nth-child(1) .serial:before {
+    content: '1. ';
+    position: absolute;
+    left: -15px;
+}
+.common-accordian:nth-child(2) .serial:before {
+    content: '2. ';
+    position: absolute;
+    left: -15px;
+}
+.common-accordian:nth-child(3) .serial:before {
+    content: '3. ';
+    position: absolute;
+    left: -15px;
+}
+.common-accordian:nth-child(4) .serial:before {
+    content: '4. ';
+    position: absolute;
+    left: -15px;
+}
+.common-accordian:nth-child(5) .serial:before {
+    content: '5. ';
+    position: absolute;
+    left: -15px;
+}
+.common-accordian:nth-child(6) .serial:before {
+    content: '6. ';
+    position: absolute;
+    left: -15px;
+}
+.common-accordian {
+    position: relative;
+}
+.dec-main-acc.rte {
+    padding: 0px;
+}
+.accordion-menu .panel {
+    border: 0;
+}
+.com-d-none{
+    display: none;
+}
+</style>

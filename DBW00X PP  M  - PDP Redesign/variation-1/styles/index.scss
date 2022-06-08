@@ -1,5 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
 ol.breadcrumb{
     display: block;
+    margin-bottom: 0;
 }
 ol.breadcrumb>li {
     display: unset;
@@ -11,7 +15,8 @@ ol.breadcrumb a, .s-select, .c-select, .o-select, .hb-select, .o2-select{
     color: #777777;
 }
 body #content .pro_main_c .slider_1 {
-    padding: 20px 10px;
+    padding: 0px 10px;
+    box-shadow: none;
 }
 .row #image-block .flex-control-thumbs {
     display: flex;
@@ -21,6 +26,7 @@ body #content .pro_main_c .slider_1 {
 .row #image-block .flex-control-thumbs img {
     min-width: 72px;
     height: 72px;
+    object-fit: contain;
 }
 .ab-title ,.ab-price{
     padding: 0 10px;
@@ -30,10 +36,11 @@ body #content .pro_main_c .slider_1 {
 }
 #content .ab-title .title h2, .accordion{
     text-align: start;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     color: #333333;
+    font-family: 'Open Sans';
 }
 #content .ab-title .title .spr-badge{
     text-align: start;
@@ -47,7 +54,7 @@ span.guarantee {
     align-items: center;
 }
 span.guarantee, .ab-title .spr-badge-caption{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     color: #333333;
@@ -65,13 +72,13 @@ span.guarantee, .ab-title .spr-badge-caption{
     color: #333333;
 }
 .ab-price #productPrice{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     line-height: 39px;
-    color: #000;
+    color: #333333;
 }
 .ab-price #comparePrice{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     text-decoration: line-through;
@@ -79,9 +86,8 @@ span.guarantee, .ab-title .spr-badge-caption{
     color: #777777;
 }
 
-/////////////////// accordion CSS
 
-.accordion-menu .common-accordian .accordion {
+.accordion-menu .accordion {
     background-color: #fff;
     cursor: pointer;
     padding: 15px 40px 15px 15px;
@@ -91,8 +97,8 @@ span.guarantee, .ab-title .spr-badge-caption{
     outline: none;
     transition: 0.4s;
     position: relative;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 25px;
     color: #333333;
     pointer-events: none;
@@ -100,13 +106,11 @@ span.guarantee, .ab-title .spr-badge-caption{
     
   }
   .accordion .ac-arrow{
-    font-size: 50px!important;
+    font-size: 18px!important;
     transform: rotate(270deg);
-    transition: transform .5s;
     position: absolute;
     right: 25px;
-    top: -5px;
-    top: 20px;
+    top: 15px;
     font-weight: 300;
 }
 button.accordion.enable {
@@ -115,21 +119,20 @@ button.accordion.enable {
 }
 .accordion.active .ac-arrow{
     transform: rotate(90deg);
-    transition: transform .5s;
+    right: 25px;
 }
 .accordion.active + .panel{
-    padding-bottom: 20px!important;
     max-height: 100%;
+    margin-bottom: 20px;
 }
 .accordion-menu{
     position: relative;
-    padding: 15px 0px;
+    padding-top: 15px;
 }
 .accordion-menu .accordion:first-child{
-    border-top: 2px solid #EFEFEF;
+    border-top: 2px solid #EFEFEF !important;
     border: none;
     background: no-repeat;
-    padding: 15px;
 }
 .panel {
     padding: 0 18px;
@@ -144,13 +147,13 @@ button.accordion.enable {
     display: none !important;
 }
 
-.panel.size-tab label, .panel.other-tab label, .panel.hb-tab label, .panel.other2-tab label{
-    font-weight: 600;
-    font-size: 16px;
+.panel.size-tab label, .panel.other-tab label, .panel.hb-tab label, .panel.other2-tab label {
+    font-weight: 500;
+    font-size: 14px;
     line-height: 22px;
-    color: #333333;
+    color: #5c5c5c;
     padding: 10px;
-    border: 2px solid #5C5C5C;
+    border: 1.5px solid #c4c4c4;
     border-radius: 6px;
     margin: 5px;
 }
@@ -162,6 +165,7 @@ button.accordion.enable {
 }
 .panel.size-tab .label-select, .panel.other-tab .label-select, .panel.hb-tab .label-select, .panel.other2-tab .label-select{
     border: 2px solid #00B77E;
+    color: #00B77E;
 }
 .qtip.qtip-default.qtip-swatch.qtip-bootstrap.qtip-pos-bc {
     display: none !important;
@@ -172,38 +176,38 @@ button.accordion.enable {
 .common-accordian:last-child{
     border-bottom: 2px solid #EFEFEF;;
 }
-// .accordion-menu .common-accordian:nth-last-child(2){
-//     border-bottom: 2px solid #EFEFEF;;
-// }
+
 
 .ab-add-to-cart {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 125px;
+    position: relative;
 }
 
-.ab-add-to-cart button {
-    font-weight: 600;
+.ab-add-to-cart .ab-cart-btn {
+    font-weight: 500;
     font-size: 20px;
     line-height: 27px;
     color: #FFFFFF;
     background: #CDCDCD;
     border-radius: 101px;
     border: none;
-    padding: 20px;
-    /* margin: 0 auto; */
-    min-width: 345px;
+    padding: 18px;
+    min-width: 340px;
     pointer-events: none;
+    opacity: .5;
 }
 .ab-cart-btn-active{
     background: #00B77E !important;
     pointer-events: auto !important;
+    opacity: 1 !important;
 }
 .con-price-div {
     position: absolute;
-    bottom: 320px;
+    bottom: 90px;
     left: 15px;
-    // display: none;
+
 }
 .free-man{
     display: flex;
@@ -217,12 +221,15 @@ button.accordion.enable {
     line-height: 19px;
     color: #000;
     padding: 30px 0px;
-    margin: 0px 10px;
+    margin: 0px 15px;
     border-bottom: 2px solid #EFEFEF;
 }
 .free-man span {
     color: #00B77E;
+}
+.free-man p {
     padding-left: 10px;
+    font-weight: 500;
 }
 .ab-klarna{
     font-size: 14px;
@@ -239,40 +246,41 @@ button.accordion.enable {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: center;
+    margin-top: -20px;
 }
 .color-tab .swatch-value-container {
     padding: 10px 0 0 0; 
     background: #FFFFFF;
-    border: 2px solid #5C5C5C;
-    border-radius: 6px;
+    border: 1.5px solid #c4c4c4;
     margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100px;
-    justify-content: center;
     flex-wrap: wrap;
+    min-height: 130px;
+    min-width: 100px;
+    border-radius: 6px;
 }
 .color-tab .swatch-value-container span{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
+    font-weight: 500;
+    font-size: 14px;
     color: #5C5C5C;
     text-align: center;
-    padding-top: 5px;
+    padding: 5px 8px;
 }
 .color-tab .swatch-value-container .swatch-image{
-    height: 65px !important;
-    width: 65px !important;
+    height: 80px !important;
+    width: 80px !important;
     line-height: 22px;
     color: #5C5C5C;
     text-align: center;
+    margin: 0 !important;
+    border-radius: 0;
 }
 
 .dec-accordion {
     background-color: #fff;
-    color: #444;
     cursor: pointer;
     padding: 15px 50px 15px 15px;
     width: 100%;
@@ -282,22 +290,23 @@ button.accordion.enable {
     transition: 0.4s;
     position: relative;
     border-top: 2px solid #EFEFEF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+    text-transform: lowercase;
+}
+.dec-accordion:first-line {
+    text-transform: capitalize;
+}
+.dec-accordion span {
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
     color: #333333;
-}
-.dec-accordion span {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    color: #333333;
     padding-left: 5px;
 }
 
-// .dec-main-acc div:first-child{
-//     border-top: 35px solid #EFEFEF;
-// }
 
 .dec-panel {
     padding: 0 18px 0px;
@@ -311,9 +320,8 @@ button.accordion.enable {
     color: rgba(0, 0, 0, 0.9);
 }
 .dec-accordion .ac-arrow{
-    font-size: 50px!important;
+    font-size: 18px!important;
     transform: rotate(90deg);
-    transition: transform .5s;
     position: absolute;
     right: 25px;
     top: 20px;
@@ -321,40 +329,41 @@ button.accordion.enable {
 }
 .dec-accordion.dec-active .ac-arrow {
     transform: rotate(270deg);
-    transition: transform .5s;
+    right: 23px;
 }
-// .dec-accordion:after {
-//     content: '\203A'; /* Unicode character for "plus" sign (+) */
-//     font-size: 13px;
-//     color: #777;
-//     float: right;
-//     margin-left: 5px;
-//   }
+
   
   .dec-accordion.dec-active + .dec-panel{
     max-height: 0 !important;
   }
-//   .main_box .desc .spr-badge + p{
-//       display: none;
-//   }
-  #content .main_box{
+  body .owl-carousel .owl-stage {
+    display: flex;
+}
+body .owl-carousel .owl-item{
+    margin: 5px;
+}
+  body #content .owl-item .main_box{
       border: none;
       border-radius: 0;
       border-bottom: 4px solid #2A364F;
-      height: auto !important;
+      height: 100% !important;
   }
+//   #content .main_box .desc{
+
+//   }
   #content .main_box .desc p {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 16px;
     color: #828282;
     order: 1;
 }
 #content .main_box .desc h5 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     line-height: 19px;
     text-decoration-line: underline;
+    text-transform: capitalize;
     order: 2;
     padding: 10px 0px;
 }
@@ -364,6 +373,7 @@ button.accordion.enable {
 #content span.spr-badge {
     order: 3;
     text-align: left;
+    font-size: 12px;
 }
 .re-pd-price{
     order: 5;
@@ -384,11 +394,12 @@ button.accordion.enable {
     color: rgba(0, 0, 0, 0.9) !important;
 }
 .dec-main-acc  a, .dec-main-acc a:hover{
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.9) !important;
 }
 .dec-panel ul li {
-    list-style: disc;
+    list-style: disc !important;
     margin-left: 18px;
+    font-size: 14px;
 }
 .dec-panel img {
     width: 100%;
@@ -404,11 +415,7 @@ button.accordion.enable {
     justify-content: start;
     align-items: center;
 }
-// .dec-accordion span{
-//     padding-left: 5px;
-//     font-size: 14px;
-//     font-weight: 400;
-// }
+
 .ab-review-panal #shopify-product-reviews .spr-header-title, .ab-review-panal #shopify-product-reviews .spr-header{
     display: none;
 }
@@ -456,7 +463,7 @@ button.accordion.enable {
 }
 
 .mfp-bg.mfp-move-from-top.mfp-ready{
-    opacity: 0;
+    opacity: 0 !important;
 }
 #content .main_box .re-pd-price > p{
     font-weight: 400;
@@ -468,19 +475,19 @@ button.accordion.enable {
     padding-top: 10px;
 }
 #content .main_box .re-rg-price{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     line-height: 27px;
-    color: #000;
+    color: #333;
 }
 #content .main_box .re-main-price{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 10px;
     line-height: 13px;
     color: #828282;
 }
 body #content .main_box .save-price{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 10px;
     line-height: 13px;
     color: red !important;
@@ -504,35 +511,35 @@ body #content .main_box .price-footer span{
     
 }
 .con-price-div .pay-price{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 31px;
     line-height: 42px;
-    color: #000;
+    color: #333333;
 }
 .con-price-div .com-price{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     color: #333333;
 }
 .con-price-div .you-save{
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 24px;
     color: red;
 }
-/////addBasketModal CSS
+
 #addBasketModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 99999; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
     -webkit-animation-name: fadeIn; /* Fade in the background */
     -webkit-animation-duration: 0.4s;
     animation-name: fadeIn;
@@ -550,10 +557,9 @@ body #content .main_box .price-footer span{
     animation-name: slideIn;
     animation-duration: 0.4s
   }
-  
   /* The Close Button */
   .add-basket-close {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     color: #333333;
@@ -577,11 +583,7 @@ body #content .main_box .price-footer span{
       padding: 10px 0px;
     }
   
-//   .add-basket-modal-footer {
-//     padding: 2px 16px;
-//   }
-  
-  /* Add Animation */
+
   @-webkit-keyframes slideIn {
     from {bottom: -300px; opacity: 0} 
     to {bottom: 0; opacity: 1}
@@ -604,7 +606,7 @@ body #content .main_box .price-footer span{
 
 .add-basket-modal-body .adtb-heading{
     padding: 10px 0px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     color: #00B77E;
@@ -612,7 +614,7 @@ body #content .main_box .price-footer span{
 }
 #abCheckoutBtn {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     line-height: 27px;
     color: #FFFFFF;
@@ -627,7 +629,7 @@ body #content .main_box .price-footer span{
 }
 #abViewBasket{
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     line-height: 27px;
     color: #333333;
@@ -641,7 +643,7 @@ body #content .main_box .price-footer span{
     margin-right: 0;
 }
 p.order-pd-name {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     color: #333333;
@@ -656,10 +658,7 @@ p.order-pd-name {
     min-width: 300px;
     color: #333333;
 }
-// strong.clearpay-instalments::after {
-//     content: '';
-//     display: flex;
-// }
+
 .clearpay-link {
     color: #333333;
 }
@@ -669,11 +668,11 @@ p.order-pd-name {
 }
 .ab-clearpay-contant {
     padding-left: 10px;
+    margin-top: 5px;
 }
 .ab-clearpay,  .ab-klarna{
     display: flex;
     justify-content: start;
-    align-items: center;
     padding: 15px;
 }
 @media only screen and (max-width: 410px){
@@ -698,7 +697,7 @@ body #footer .trustpilot-widget{
     padding: 15px;
 }
 .last-acc .accordion{
-    border-bottom: 2px solid #EFEFEF;
+    border-bottom: 2px solid #EFEFEF !important;
 }
 .review-acc .spr-starrating{
     font-size: 80%;
@@ -741,4 +740,113 @@ span.serial {
 }
 .common-accordian {
     position: relative;
+}
+.dec-main-acc.rte {
+    padding: 0px;
+}
+.accordion-menu .panel {
+    border: 0;
+    margin-bottom: 0;
+}
+.com-d-none{
+    display: none;
+}
+body #image-block .flex-control-thumbs .flex-active, body #image-block #carousel .flex-active-slide img {
+    opacity: 1;
+    cursor: default;
+    border: 2px solid #828282;
+}
+a[href="#abReview"] {
+    display: flex;
+}
+.dec-panel a {
+    color: #00B77E !important;
+    text-decoration: underline;
+}
+.dec-accordion strong, .dec-panel strong {
+    font-weight: 500;
+}
+.dec-main-acc li {
+    font-size: 14px;
+}
+.dec-accordion .spr-badge-caption{
+    font-size: 14px;
+    font-weight: 500;
+}
+.accordion-menu .panel {
+    padding: 0px 8px;
+    box-shadow: none;
+}
+.ab-review-panal .spr-review-header-byline{
+    font-style: normal;
+    font-size: 14px;
+}
+body .h_row_4 .clearfix h3{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    color: #333333 !important;
+    padding-top: 5px;
+    margin-left: -5px;
+}
+body #content .h_row_4 .carosel{
+    padding-top: 15px;
+}
+body #content .product_c #featured-products .main_box {
+    margin: 0 5px 0px;
+}
+#abReview .dec-accordion {
+    text-transform: capitalize;
+}
+.title_right{
+    display: none;
+}
+#candyrack-root{
+    display: none;
+}
+
+#content .h_row_4 {
+    background: #F3F3F3;
+    padding: 15px 15px 0px;
+}
+#image-block .flexslider .slides img {
+    max-width: 100%;
+    display: block;
+    height: 290px;
+    object-fit: contain;
+}
+strong.clearpay-instalments {
+    font-weight: 500;
+}
+button.ab-cart-btn i {
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.swatch-value-container.swatch-selected .swatch-value{
+    transform: scale(1) !important;
+    border: 0;
+}
+.swatch-value-container.swatch-selected {
+    border: 2px solid #00B77E;
+}
+.swatch-value-container.swatch-selected span{
+    color: #00B77E;
+}
+
+
+@media only screen and (max-width: 360px){
+    .row #image-block .flex-control-thumbs img {
+        min-width: 60px;
+    }
+    .ab-add-to-cart .ab-cart-btn {
+        min-width: 300px;
+    }
+    
+}
+#abCheckoutBtn i,  #abViewBasket i{
+    font-size: 14px;
+    padding-left: 7px;
 }
