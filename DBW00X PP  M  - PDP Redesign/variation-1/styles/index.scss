@@ -3,7 +3,7 @@ html {
 }
 ol.breadcrumb{
     display: block;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 ol.breadcrumb>li {
     display: unset;
@@ -16,6 +16,7 @@ ol.breadcrumb a, .s-select, .c-select, .o-select, .hb-select, .o2-select{
 }
 body #content .pro_main_c .slider_1 {
     padding: 0px 10px;
+    margin-bottom: 23px;
     box-shadow: none;
 }
 .row #image-block .flex-control-thumbs {
@@ -28,8 +29,8 @@ body #content .pro_main_c .slider_1 {
     height: 72px;
     object-fit: contain;
 }
-.ab-title ,.ab-price{
-    padding: 0 10px;
+.ab-title, .ab-price{
+    padding: 4px 10px;
 }
 #content .ab-title .title{
     padding: 0;
@@ -107,7 +108,7 @@ span.guarantee, .ab-title .spr-badge-caption{
   }
   .accordion .ac-arrow{
     font-size: 18px!important;
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     position: absolute;
     right: 25px;
     top: 15px;
@@ -118,12 +119,12 @@ button.accordion.enable {
     opacity: 1;
 }
 .accordion.active .ac-arrow{
-    transform: rotate(90deg);
-    right: 25px;
+    transform: rotate(270deg);
+    right: 20px;
 }
 .accordion.active + .panel{
     max-height: 100%;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 .accordion-menu{
     position: relative;
@@ -194,9 +195,10 @@ button.accordion.enable {
     border-radius: 101px;
     border: none;
     padding: 18px;
-    min-width: 340px;
+    width: 94%;
     pointer-events: none;
     opacity: .5;
+    position: relative;
 }
 .ab-cart-btn-active{
     background: #00B77E !important;
@@ -205,13 +207,13 @@ button.accordion.enable {
 }
 .con-price-div {
     position: absolute;
-    bottom: 90px;
+    bottom: 85px;
     left: 15px;
 
 }
 .free-man{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 15px;
 }
@@ -238,7 +240,6 @@ button.accordion.enable {
 }
 .ab-klarna p{
     padding-left: 10px;
-    min-width: 300px;
 }
 
 .color-tab .swatch-option{
@@ -261,6 +262,7 @@ button.accordion.enable {
     min-height: 130px;
     min-width: 100px;
     border-radius: 6px;
+    cursor: pointer;
 }
 .color-tab .swatch-value-container span{
     font-weight: 500;
@@ -268,6 +270,7 @@ button.accordion.enable {
     color: #5C5C5C;
     text-align: center;
     padding: 5px 8px;
+    cursor: pointer;
 }
 .color-tab .swatch-value-container .swatch-image{
     height: 80px !important;
@@ -277,6 +280,7 @@ button.accordion.enable {
     text-align: center;
     margin: 0 !important;
     border-radius: 0;
+    cursor: pointer;
 }
 
 .dec-accordion {
@@ -294,11 +298,8 @@ button.accordion.enable {
     font-size: 18px;
     line-height: 25px;
     color: #333333;
-    text-transform: lowercase;
 }
-.dec-accordion:first-line {
-    text-transform: capitalize;
-}
+
 .dec-accordion span {
     font-weight: 600;
     font-size: 18px;
@@ -309,7 +310,7 @@ button.accordion.enable {
 
 
 .dec-panel {
-    padding: 0 18px 0px;
+    padding: 5px 18px 15px;
     background-color: white;
     max-height: auto;
     overflow: hidden;
@@ -321,15 +322,15 @@ button.accordion.enable {
 }
 .dec-accordion .ac-arrow{
     font-size: 18px!important;
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     position: absolute;
-    right: 25px;
-    top: 20px;
+    right: 20px;
+    top: 15px;
     font-weight: 300;
 }
 .dec-accordion.dec-active .ac-arrow {
-    transform: rotate(270deg);
-    right: 23px;
+    transform: rotate(90deg);
+    right: 25px;
 }
 
   
@@ -348,9 +349,7 @@ body .owl-carousel .owl-item{
       border-bottom: 4px solid #2A364F;
       height: 100% !important;
   }
-//   #content .main_box .desc{
 
-//   }
   #content .main_box .desc p {
     font-weight: 400;
     font-size: 12px !important;
@@ -400,6 +399,7 @@ body .owl-carousel .owl-item{
     list-style: disc !important;
     margin-left: 18px;
     font-size: 14px;
+    color: #333333 !important;
 }
 .dec-panel img {
     width: 100%;
@@ -409,6 +409,7 @@ body .owl-carousel .owl-item{
 }
 .dec-main-acc.rte ul, .dec-main-acc.rte ol {
     margin: 0;
+    
 }
 .review-acc .dec-accordion{
     display: flex;
@@ -458,7 +459,7 @@ body .owl-carousel .owl-item{
 }
 
 
-.mfp-wrap{
+.mfp-wrap .mfp-content .mfp-with-anim.modal-popup{
     display: none !important;
 }
 
@@ -501,8 +502,15 @@ body #content .main_box .price-footer span{
     font-weight: 700;
 }
 .dec-panel table {
+    table-layout: fixed;
     width: 100%;
 }
+.dec-panel table td{
+    word-wrap: break-word;
+    width: auto !important;
+    padding: 7px !important;
+}
+
 .con-price-div p{
     font-weight: 400;
     font-size: 16px;
@@ -565,7 +573,7 @@ body #content .main_box .price-footer span{
     color: #333333;
   }
   .add-basket-close span, #abCheckoutBtn span, #abViewBasket span{
-    padding-left: 5px;
+    padding-left: 10px;
   }
   
   .add-basket-close:hover,
@@ -612,6 +620,12 @@ body #content .main_box .price-footer span{
     color: #00B77E;
     text-align: center;
 }
+.ab-checkout, .ab-view-basket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 #abCheckoutBtn {
     font-style: normal;
     font-weight: 500;
@@ -621,12 +635,17 @@ body #content .main_box .price-footer span{
     background: #00B77E;
     border-radius: 75px;
     border: 0;
-    min-width: 345px;
-    height: 50px;
-    padding: 10px 0px;
+    max-width: initial;
+    width: 100%;
+    height: 60px;
     margin-bottom: 10px;
     margin-right: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #abViewBasket{
     font-style: normal;
     font-weight: 500;
@@ -636,11 +655,14 @@ body #content .main_box .price-footer span{
     border-radius: 75px;
     background: #FFFFFF;
     border: 2px solid #C4C4C4;
-    min-width: 345px;
-    height: 50px;
-    padding: 10px 0px;
+    max-width: initial;
+    width: 100%;
+    height: 60px;
     margin-bottom: 30px;
     margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 p.order-pd-name {
     font-weight: 500;
@@ -655,7 +677,6 @@ p.order-pd-name {
 .ab-clearpay-contant .clearpay-paragraph{
     display: block !important;
     margin: 0 !important;
-    min-width: 300px;
     color: #333333;
 }
 
@@ -743,6 +764,7 @@ span.serial {
 }
 .dec-main-acc.rte {
     padding: 0px;
+    border-top: 30px solid #F3F3F3;
 }
 .accordion-menu .panel {
     border: 0;
@@ -814,7 +836,7 @@ body #content .product_c #featured-products .main_box {
 #image-block .flexslider .slides img {
     max-width: 100%;
     display: block;
-    height: 290px;
+    height: 280px !important;
     object-fit: contain;
 }
 strong.clearpay-instalments {
@@ -844,9 +866,86 @@ button.ab-cart-btn i {
     .ab-add-to-cart .ab-cart-btn {
         min-width: 300px;
     }
+    #image-block .flexslider .slides img {
+        height: 230px !important;
+    }
     
 }
 #abCheckoutBtn i,  #abViewBasket i{
     font-size: 14px;
     padding-left: 7px;
+}
+.ab-cart-btn .ac-arrow svg, #abCheckoutBtn .ac-arrow svg, #abViewBasket .ac-arrow svg{
+    width: 9px;
+}
+.ab-cart-btn .ac-arrow svg path, #abCheckoutBtn .ac-arrow svg path{
+    fill: #ffff;
+}
+
+.accordion-menu > .common-accordian:nth-last-child(3){
+    border-bottom: 2px solid #EFEFEF !important;
+}
+.dec-panel ul li p {
+    padding: 0;
+}
+
+h2.sub-0 {
+    margin-top: 5px;
+    font-size: 16px !important;
+    color: #333333;
+    font-weight: 500 !important;
+    line-height: 20px;
+    font-family: 'Open Sans';
+    display: block !important;
+}
+.dec-main-acc.rte p{
+    color: #333333;
+}
+.dec-main-acc .dec-panel table ~ p {
+    padding: 0;
+}
+.dec-main-acc .dec-panel table ~ p:last-child::before {
+    content: 'Please Note';
+    display: flex;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+.dec-panel .rte__table-wrapper {
+    padding-bottom: 25px;
+}
+.subTitle, .dec-panel p br, .empty-clearpay, afterpay-placement{
+    display: none !important;
+}
+.ac-arrow svg{
+    width: 12px;
+}
+.dec-accordion.dec-active ~ .dec-panel {
+    padding: 0 18px;
+}
+button.ab-cart-btn span {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+button.ab-cart-btn span.ac-arrow {
+    position: absolute;
+    bottom: 16px;
+}
+.ab-title {
+    padding-top: 0;
+}
+.dec-main-acc .dec-panel table ~ p:last-child::first-letter {
+    margin-left: -3px;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 340px){
+    #image-block .flexslider .slides img {
+        height: 215px !important;
+    }
+    #image-block .flex-control-thumbs li{
+        border: 4px solid #fff !important;
+    }
+    
 }

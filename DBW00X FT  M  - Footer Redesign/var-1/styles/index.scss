@@ -1,0 +1,188 @@
+
+body .sleepletter, body .pay-log-container {
+    background-color: #2A364F;
+    color: #FFFFFF;
+    padding: 25px 20px;
+}
+.ab-join h3, .checkout-securely h3{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+.ab-join p, .ab-phn p, .ab-sales-mail p, .p-category {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.enve-icon, .phn-icon {
+    padding-right: 15px;
+}
+.ab-join, .ab-phn, .ab-sales-mail {
+    display: flex;
+}
+
+.ab-mail-box #mail{
+    padding: 15px 10px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6D6E71;
+    width: 60%;
+}
+#mc-embedded-subscribe-form button span, #footer .f_top{
+    display: none;
+}
+#mc-embedded-subscribe-form{
+    display: flex;
+}
+#mc-embedded-subscribe-form button {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    width: 40%;
+    max-width: 130px;
+    color: #FFFFFF;
+    background: #00B77E;
+    border-radius: 31px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mc-embedded-subscribe-form button i{
+    font-size: 10px;
+}
+#mc-embedded-subscribe-form button:hover{
+    text-decoration: none;
+}
+.ab-phn, .ab-sales-mail {
+    display: flex;
+    align-items: center;
+}
+.ab-mail-box {
+    padding-top: 20px;
+}
+.phn-mail, .c-support, .about-divan, .head-office, .popular-ca {
+    padding: 25px 20px;
+    color: #2A364F;
+}
+.ab-footer .phn-mail{
+	padding-top: 20px;
+}
+.c-support, .about-divan, .head-office {
+    padding: 15px 20px;
+    color: #2A364F;
+}
+.phn-mail h3, .c-support h3, .about-divan h3, .head-office h3, .popular-ca h3 {
+	font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #2A364F;
+}
+.phn-mail .enve-icon path {
+    fill: #2A364F;
+}
+.ab-phn, .ab-sales-mail {
+    padding-top: 15px;
+}
+.ab-phn a, .ab-sales-mail a{
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2A364F;
+}
+.ab-phn a:hover, .ab-sales-mail a:hover{
+    color: #2A364F;
+}
+
+.c-support ul, .about-divan ul, .head-office ul {
+    padding-top: 15px;
+    line-height: 30px;
+
+}
+.ab-footer-link, .ab-footer-link:hover, .p-category:hover{
+    color: #2A364F;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+.popular-ca-slider {
+    padding: 15px 0;
+}
+.p-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E8E8E8;
+    padding: 10px 12px;
+    max-width: 130px;
+    border-radius: 6px;
+    color: #2A364F;
+    text-decoration: none !important;
+}
+.checkout-securely {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.checkout-securely svg {
+    width: 16px;
+    margin-right: 10px;
+}
+.payment-log {
+    background: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 10px 0 20px;
+
+}
+.payment-log ul.list-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.payment-log ul.list-inline li {
+    width: 12%;
+    display: flex;
+    justify-content: center;
+}
+.payment-log ul.list-inline li img{
+    width: 120%;
+}
+#footer .copy-right .f_bot .f_bot_left {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+}
+#footer .f_mid, #mc-embedded-subscribe-form span.fa-check {
+    display: none;
+}
+
+body #content{
+	padding-bottom: 0;
+}
+.ab-footer .checkout-securely h3{
+	font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+#mc-embedded-subscribe-form .ab-chevron-icon {
+    display: block !important;
+    width: 6px;
+    margin-left: 5px;
+}
+.email_box #mc-embedded-subscribe-form .btn:focus{
+    outline: none;
+}
+.phn-icon, .ab-sales-mail .enve-icon{
+    cursor: pointer;
+}
