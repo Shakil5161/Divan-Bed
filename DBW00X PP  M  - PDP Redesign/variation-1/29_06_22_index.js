@@ -1,6 +1,5 @@
 import './styles/index.scss';
 
-
 var pdpRedesign = {
   init: function() {
       this.mainCss();
@@ -92,17 +91,16 @@ var pdpRedesign = {
 
   
   var sizeInsert = `<div class='ab-loder-overlay'>
-    <div class="ab-bouncing-loader">
-    <div></div>
-    <div></div>
-    <div></div>
+      <div class="ab-bouncing-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
-</div>
-
-<div class='size-accordion common-accordian'>
+  <div class='size-accordion common-accordian'>
         <button class="accordion active enable"><span class='serial'></span> Select ${$(`.selector-wrapper [data-option="option1"]`).siblings( 'label' ).text()}: <span class='s-select'>Non Selected</span> <span class='ac-arrow'>${chevron}</span> </button>
         <div class="panel size-tab"> </div>
-      </div>`;
+    </div>`;
 
  $(`.selector-wrapper [data-option="option1"]`).siblings( 'label' ).text() == 'Size' && $('.accordion-menu').prepend(sizeInsert);
 
@@ -165,7 +163,21 @@ $(`.selector-wrapper [data-option="option3"] option`).each(function( index ) {
 
   $('.other2-tab').append(otherOption);
 });
-
+///////// click function on selected size
+// $(".set-op-value").click(function(e){
+//   console.log(e)
+//   console.log(e.currentTarget.parentNode,"click",e.target.classList[0]);
+//   let anotherClass = e.target.classList[0];
+//   $(`.${anotherClass}`).removeClass("label-select");
+//   let allChild = e.currentTarget.parentNode.childNodes
+//   // console.log(allChild.children(),'hi')
+//   // allChild.each(function( elem ) {
+//   //   console.log(elem,'elem')
+//   // })
+//   $( this ).addClass("label-select");
+//   $('.s-select').html($( this ).text() +" " + '&#10003;').addClass('d-select')
+//   $(`.selector-wrapper [data-option="option1"]`).val($( this ).text());
+// });
 
 
 ///////// click function on selected size
@@ -185,6 +197,7 @@ $(".size-op").click(function(e){
 
 ///////// click function on selected other option
 $(".other-op").click(function(e){
+  console.log("click other-op");
   $('.other-op').removeClass("label-select");
   $( this ).addClass("label-select");
   $('.o-select').html($( this ).text() +" " + '<i class="fa fa-check"></i>').addClass('d-select');
@@ -214,7 +227,7 @@ let checkColor = setInterval(function() {
 
   $('.size-accordion').after(colorAccordion);      
 
-    $(`#addToCartForm`).appendTo(".panel.color-tab");
+    $(`.mw-option-swatch.mw-validate-required-option.mw-option`).appendTo(".panel.color-tab");
     $(`.panel.color-tab .swatch-value-container`).click(function(){
       let colorName = $(`.mw-option-swatch.mw-validate-required-option.mw-option input[type="hidden"]`).val();
       $(".c-select").html( colorName == "" ? 'Non Selected' : colorName +" " + '<i class="fa fa-check"></i>');
@@ -226,11 +239,14 @@ let checkColor = setInterval(function() {
       $(this).addClass('set-op-value');
       $(this).attr('tabindex',index);
 
+      // $(`.panel.color-tab .swatch-value-container [data-value-text=]`).addClass('set-op-value')
+      // console.log(elem, 'elem')
       let singleColor =$(this).data('value-text');
       $(this).append(`<span>${singleColor}</span>`);
     });
     
     $(".swatch-value-container.set-op-value").on("click", function(){
+      console.log("color clciked");
       $(this).closest(".common-accordian").find('.accordion ').removeClass("active");
       $(this).closest(".common-accordian").next('.common-accordian').find('.accordion ').addClass("active enable");
       
@@ -278,6 +294,7 @@ let checkColor = setInterval(function() {
     });
 
     $(".set-op-value").on("click", function(){
+      console.log("clciked hb");
       $(this).closest(".common-accordian").find('.accordion ').removeClass("active");
       $(this).closest(".common-accordian").next('.common-accordian').find('.accordion ').addClass("active enable");
       $(this).closest(".common-accordian").next('.common-accordian').find('.ab-cart-btn').addClass("ab-cart-btn-active");
@@ -298,6 +315,7 @@ let checkColor = setInterval(function() {
 }, 100);
 
 $(".set-op-value").on("click", function(){
+  console.log("clciked common on click");
   $(this).closest(".common-accordian").find('.accordion ').removeClass("active");
   $(this).closest(".common-accordian").next('.common-accordian').find('.accordion ').addClass("active enable");
   $(this).closest(".common-accordian").next('.common-accordian').find('.ab-cart-btn').addClass("ab-cart-btn-active");
@@ -338,6 +356,7 @@ let totalPrice = `<div class="con-price-div">
 
         var elementToObserve = document.querySelector('form .desc_blk .variations');
     var observer = new MutationObserver(function() {
+              console.log("mutationnnnnnnnnnnnnnnnnnn");
                   ///////// loop on others option
 
     if($(`.other-accordion .d-select`).text()){
@@ -403,8 +422,9 @@ let totalPrice = `<div class="con-price-div">
 
     ///////// click function on selected other option
     $(".other-op").click(function(e){
-      $(".other-accordion .accordion").removeClass('active');
-      $(".other2-accordion .accordion").addClass('active enable');
+console.log('other op')
+      $(".other-accordion .accordion").removeClass('active')
+      $(".other2-accordion .accordion").addClass('active enable')
       
       $('.other-op').removeClass("label-select");
       $( this ).addClass("label-select");
@@ -416,14 +436,14 @@ let totalPrice = `<div class="con-price-div">
 
       let curPrice = $('.ab-price .price #productPrice').text().replace('£', '');
       let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
-      
+      // let youSave = comPrice - curPrice;
+  // console.log(curPrice, comPrice, youSave)
       $(".con-price-div .pay-price").text(`£${curPrice}`);
       $(".con-price-div .com-price").text(`£${comPrice}`);
       $(".con-price-div .you-save").text(`You save £${curPrice}`);
 
-      window._conv_q = window._conv_q || [];
-_conv_q.push(["triggerConversion", "100026190"]);
-      
+
+
     });
     ///////// click function on selected other2 option
     $(".other2-op").click(function(e){
@@ -449,6 +469,18 @@ _conv_q.push(["triggerConversion", "100026190"]);
     var acc = document.querySelectorAll(".accordion");
       var i;
     
+    // for (i = 0; i < acc.length; i++) {
+    // acc[i].addEventListener("click", function() {
+    //   console.log('acc click');
+    //   this.classList.toggle("active");
+    //   // var panel = this.nextElementSibling;
+    //   // if (panel.style.maxHeight) {
+    //   //   panel.style.maxHeight = null;
+    //   // } else {
+    //   //   panel.style.maxHeight = panel.scrollHeight + "px";
+    //   // } 
+    // });
+    // }
 
     $(".set-op-value").on("click", function(){
 
@@ -456,10 +488,12 @@ _conv_q.push(["triggerConversion", "100026190"]);
       $(this).closest(".common-accordian").next('.common-accordian').find('.accordion ').addClass("active enable");
       $(this).closest(".common-accordian").next('.common-accordian').find('.ab-cart-btn').addClass("ab-cart-btn-active");
       
+      console.log('click from mutation');
       /////price update
       let curPrice = $('.ab-price .price #productPrice').text().replace('£', '');
       let comPrice = $('.ab-price .price #comparePrice').text().replace('£', '');
       // let youSave = comPrice - curPrice;
+  // console.log(curPrice, comPrice, youSave)
       $(".con-price-div .pay-price").text(`£${curPrice}`);
       $(".con-price-div .com-price").text(`£${comPrice}`);
       $(".con-price-div .you-save").text(`You save £${curPrice}`);
@@ -485,7 +519,7 @@ _conv_q.push(["triggerConversion", "100026190"]);
       let pdName = $(`.ab-title .title [itemprop="name"]`).text();
       $('.order-pd-name').text(pdName);
       $('#addBasketModalBtn').click();
-      
+// console.log($(`#candyrack-frame .Upsell-List`).length, '#candyrack-frame .Upsell-List')
     });
 
     // let lastCommonAcc = $('.common-accordian')[$('.common-accordian').length - 2];
@@ -528,14 +562,19 @@ waitSomeElem: function() {
     }
   }, 100);
 
-let checkLoader = setInterval(function() {
-  if ($(`#mw-apo-init-spinner`).length == 0) {
-    $(".ab-loder-overlay").remove();
-    clearInterval(checkLoader);
-  }
-}, 20);
 
-  
+  // $('.accordion-menu .common-accordian').each(function(index){
+  //   console.log('index', index+1)
+  // })
+
+  let checkLoader = setInterval(function() {
+    console.log('runnnnnn load')
+    if ($(`#mw-apo-init-spinner`).length == 0) {
+      $(".ab-loder-overlay").remove()
+      clearInterval(checkLoader);
+    }
+  }, 20);
+
 },
 
 paymentOption: function(truckSvg, clearpaySvg, klarnaSvg){
@@ -632,6 +671,7 @@ description: function( chevron ){
       
     $('.ab-review-panal').append(`<p id='ab_read_more'>Read more Reviews</p>`);
     $('#ab_read_more').on('click', function(){
+        console.log(" add more review click");
         $('.spr-pagination-next a').click();
       });
 
@@ -644,22 +684,34 @@ description: function( chevron ){
   let checkReviewStar = setInterval(function() {
     if ($('.review_row .spr-badge').length > 0) {
       $('.review_row .spr-badge').appendTo('.review-acc .dec-accordion .star');
-      $(`.ab-title .spr-badge-caption`).wrap( `<a href="#abReview"></a>` );
+      $(`.ab-title .spr-badge-caption`).wrap( `<a href="#abReview"></a>` )
       clearInterval(checkReviewStar);
       
       setTimeout(() => {
-        $(".ab-review-panal .spr-reviews").html() == '' && $('.ab-review-panal').html(`<p> No Reviews</p>`);
+        $(".ab-review-panal .spr-reviews").html() == '' && $('.ab-review-panal').html(`<p> No Reviews</p>`)
       }, 3000);
     }
   }, 100);
 
 
 
+  // $('.review_row .spr-badge').appendTo(".review-acc .dec-accordion");
+  // $('#ab_read_more').on('click', function(){
+  //   console.log(" add more review click")
+  //   $('.spr-pagination-next').click()
+  // })
+//     $(".dec-main-acc .dec-panel table ~ p strong").each(function(){
+//       console.log("element",  $(this));
+//       this.innerText = this.innerText.toLowerCase().replace(/\b(\w)/g, x => x.toUpperCase());
+
+// this.innerText = this.innerText.replace("Please Note:", "");
+//     })
+
   
   $(`.form-add-to-cart .rte h1, .form-add-to-cart .rte h2, .form-add-to-cart .rte h3, .form-add-to-cart .rte h2 strong`).each(function( index ) {
     
     if($(this).text() == '' || $(this).text().trim() == ''){
-      $(this).remove();
+      $(this).remove()
     } else{
       this.innerText = this.innerText.toLowerCase().replace(/\b(\w)/g, x => x.toUpperCase());
       this.innerHTML = this.innerHTML.replace('&nbsp;', ' ');
@@ -682,7 +734,7 @@ description: function( chevron ){
       var title = $(`.dec-heading-${index}`).html();
       var content = $(`#desc-${index}`).html();
 
-     
+     content == undefined ? console.log('No content', content) : console.log('content') 
       
       
       var decAcc = `<div>
@@ -712,10 +764,13 @@ description: function( chevron ){
   let pleaseNote = setInterval(function() {
     if ($(".dec-main-acc .dec-panel table ~ p").length > 0) {
       $(".dec-main-acc .dec-panel table ~ p strong, .dec-main-acc .dec-panel table ~ p").each(function(){
+console.log(this.innerText.toLowerCase().replace(/[.](\s)?\w/g, x => x.toUpperCase()), 'this.innerText')
+
         this.innerText = this.innerText.toLowerCase().replace(/[.](\s)?\w/g, x => x.toUpperCase());
+        
 
   this.innerText = this.innerText.replace("Please note:", "");
-      });
+      })
 
       clearInterval(pleaseNote);
     }
@@ -803,17 +858,15 @@ addBasketModal: function( chevron ){
       try {
           pdpRedesign.init();
         
-         
+          const styles = ["color: white", "background: #07090F", "font-size: 20px", "border: 3px solid red", "text-shadow: 1px 1px black", "padding: 5px"].join(";");
+      console.log(`%cThis is a EchoLogyx variation find - ${new Date().toLocaleDateString()}`, styles);
       } catch (error) {
+          console.log('Initialization error:', error);
       }
   } else {
       setTimeout(pollOnload, 25);
   }
 })();
-
-
-
-
 
 
 // .spr-summary .spr-summary-actions-togglereviews
